@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MBProgressHUD/MBProgressHUD.h>
-#import <AFHTTPRequestOperationManager.h>
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 #import <Reachability/Reachability.h>
 
 @interface AFNetworkingHelper : NSObject
