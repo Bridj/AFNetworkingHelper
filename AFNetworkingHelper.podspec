@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "AFNetworkingHelper"
-s.version          = "0.1.4"
+s.version          = "0.2.bridj"
 s.summary          = "A short wrapper written over AFNetworking library."
 s.description      = <<-DESC
 This is a custom wrapper over the most amazing networking library for objective C, AFNetworking that we use extensively inside RainingClouds.
