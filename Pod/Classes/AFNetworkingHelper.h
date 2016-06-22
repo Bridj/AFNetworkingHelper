@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 IPWorldTv. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <MBProgressHUD/MBProgressHUD.h>
-#import <AFNetworking/AFHTTPRequestOperationManager.h>
-#import <Reachability/Reachability.h>
+@import Foundation;
+@import AFNetworking;
+@import Reachability;
+@import MBProgressHUD;
 
 @interface AFNetworkingHelper : NSObject
 
