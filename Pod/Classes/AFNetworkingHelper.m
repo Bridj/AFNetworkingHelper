@@ -11,6 +11,12 @@
 
 @implementation AFNetworkingHelper
 
+static NSString* loadingString = @"Loading";
++(void) setLoadingString:(NSString*)str {
+    loadingString = str;
+}
+
+
 static NSMutableArray *networkQueue = nil;
 
 + (NSMutableArray *) getNetworkQueue{
@@ -137,7 +143,7 @@ static NSMutableArray *networkQueue = nil;
     else {
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:parentView animated:YES];
-        [hud setLabelText:@"Loading"];
+        [hud setLabelText:loadingString];
         operation = [manager DELETE:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [MBProgressHUD hideAllHUDsForView:parentView animated:YES];
             if ([operation isCancelled]){
@@ -208,7 +214,7 @@ static NSMutableArray *networkQueue = nil;
     }
     else {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:parentView animated:YES];
-        [hud setLabelText:@"Loading"];
+        [hud setLabelText:loadingString];
         operation = [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [MBProgressHUD hideAllHUDsForView:parentView animated:YES];
             if ([operation isCancelled]){
@@ -276,7 +282,7 @@ static NSMutableArray *networkQueue = nil;
     }
     else {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:parentView animated:YES];
-        [hud setLabelText:@"Loading"];
+        [hud setLabelText:loadingString];
         operation = [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [MBProgressHUD hideAllHUDsForView:parentView animated:YES];
             if ([operation isCancelled]){
@@ -343,7 +349,7 @@ static NSMutableArray *networkQueue = nil;
     }
     else {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:parentView animated:YES];
-        [hud setLabelText:@"Loading"];
+        [hud setLabelText:loadingString];
         operation = [manager PUT:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [MBProgressHUD hideAllHUDsForView:parentView animated:YES];
             if ([operation isCancelled]){
@@ -419,7 +425,7 @@ static NSMutableArray *networkQueue = nil;
     }
     else {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:parentView animated:YES];
-        [hud setLabelText:@"Loading"];
+        [hud setLabelText:loadingString];
         operation = [manager GET:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [MBProgressHUD hideAllHUDsForView:parentView animated:YES];
             if ([operation isCancelled]){
@@ -492,7 +498,7 @@ static NSMutableArray *networkQueue = nil;
     }
     else {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:parentView animated:YES];
-        [hud setLabelText:@"Loading"];
+        [hud setLabelText:loadingString];
         operation = [manager PATCH:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [MBProgressHUD hideAllHUDsForView:parentView animated:YES];
             if ([operation isCancelled]){
